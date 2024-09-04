@@ -1,0 +1,61 @@
+div {
+  margin-bottom: 30px;
+  height: 270px;
+}
+
+h1 {
+  position: absolute;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-weight: regular;
+  margin: 5px 0 5px;
+  font-size: 100px;
+  letter-spacing: 17px;
+  line-height: 100px;
+  opacity: 0.7;
+  transform: translate(-50%, 0%);
+  left: 50dvw;
+}
+
+.nombre-blanco,
+.apellido-blanco {
+  color: var(--color9);
+  opacity: 0.7;
+  transform: translate(-50%, 0%);
+}
+.apellido-blanco {
+  top: 150px;
+}
+.nombre-rojo,
+.apellido-rojo {
+  color: var(--color4);
+  transform: translate(calc(-50% - 5px), 5px);
+}
+.apellido-rojo {
+  top: 150px;
+}
+
+.nombre-azul,
+.apellido-azul {
+  color: var(--color3);
+  transform: translate(calc(-50% + 5px), -5px);
+}
+.apellido-azul {
+  top: 150px;
+}
+.nombre-amarillo,
+.apellido-amarillo {
+  color: var(--color7);
+  transform: translate(calc(-50% + 3px), 2px);
+}
+.apellido-amarillo {
+  top: 150px;
+}
+.nombre-verde,
+.apellido-verde {
+  color: var(--color6);
+  transform: translate(calc(-50% - 2px), -2px);
+}
+.apellido-verde {
+  top: 150px;
+}

@@ -1,0 +1,54 @@
+/* Reset */
+
+:root {
+  --color0: #000000;
+  --color1: #000814;
+  --color2: #001d3d;
+  --color3: #003566;
+  --color4: #d62828;
+  --color5: #f77f00;
+  --color6: #7cb518;
+  --color7: #ffc300;
+  --color8: #ffd60a;
+  --color9: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  position: relative;
+  min-width: 0;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-height: 100dvh;
+  min-width: 100%;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: sans-serif;
+  text-wrap: balance;
+}
+
+p {
+  font-family: sans-serif;
+  text-wrap: pretty;
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Reset */
+
+@media (prefers-color-scheme: light) {
+}

@@ -1,0 +1,47 @@
+p {
+  text-wrap: pretty;
+  color: var(--color7);
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+}
+
+#reloj {
+  display: flex;
+  margin: 2rem auto;
+  width: fit-content;
+}
+
+#reloj > .pais {
+  width: 90px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+#reloj > .hora {
+  border-left: hidden;
+  width: 50px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+#reloj > div > p {
+  /*color: var(--color5);*/
+  margin: 5px auto;
+  width: fit-content;
+}
+
+#hora-contenido {
+  animation: 1.2s infinite alternate parpadeo;
+}
+
+@keyframes parpadeo {
+  from {
+    opacity: 1;
+  }
+  92% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
