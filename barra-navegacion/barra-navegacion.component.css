@@ -1,0 +1,10 @@
+nav {
+  position: absolute;
+  bottom: -20dvh;
+  left: 50dvw;
+  transform: translate(-50%, 0%);
+  background-color: #fff;
+  height: 60px;
+  width: 500px;
+  border-radius: 10px;
+}
