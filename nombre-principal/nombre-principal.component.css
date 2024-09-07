@@ -14,20 +14,13 @@ h1 {
   line-height: 100px;
   transform: translate(-50%, 0%);
   left: 50dvw;
+  mix-blend-mode: screen;
 }
 
-.nombre-blanco,
-.apellido-blanco {
-  color: var(--color9);
-  transform: translate(-50%, 0%);
-}
-.apellido-blanco {
-  top: 150px;
-}
 .nombre-rojo,
 .apellido-rojo {
   color: var(--color4);
-  transform: translate(calc(-50% - 3px), 3px);
+  transform: translate(calc(-50% + 2px), -2px);
 }
 .apellido-rojo {
   top: 150px;
@@ -35,17 +28,18 @@ h1 {
 
 .nombre-azul,
 .apellido-azul {
-  color: var(--color3);
-  transform: translate(calc(-50% + 2px), -2px);
+  color: var(--color2);
+  transform: translate(calc(-50% - 3px), 2px);
 }
 .apellido-azul {
   top: 150px;
 }
-.nombre-amarillo,
-.apellido-amarillo {
-  color: var(--color7);
-  transform: translate(calc(-50% + 3px), 2px);
+
+.nombre-verde,
+.apellido-verde {
+  color: var(--color3);
+  transform: translate(calc(-50% + 3px), 4px);
 }
-.apellido-amarillo {
+.apellido-verde {
   top: 150px;
 }

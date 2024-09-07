@@ -1,16 +1,12 @@
 /* Reset */
 
 :root {
-  --color0: #000000;
   --color1: #000814;
-  --color2: #001d3d;
-  --color3: #003566;
+  --color2: #003566;
+  --color3: #29bf12;
   --color4: #d62828;
-  --color5: #f77f00;
-  --color6: #7cb518;
-  --color7: #ffc300;
-  --color8: #ffd60a;
-  --color9: #ffffff;
+  --color5: #DDCB47;
+  --color6: #ddd690;
 }
 
 html {

@@ -1,10 +1,25 @@
+:host {
+  --altura-barra: 60px;
+  --ancho-barra: 60px;
+}
 nav {
   position: absolute;
-  bottom: -20dvh;
+  bottom: -25dvh;
   left: 50dvw;
   transform: translate(-50%, 0%);
-  background-color: #fff;
+  background-color: var(--color3);
+  height: var(--altura-barra);
+  width: 500px;
+}
+
+.replica-azul {
   height: 60px;
   width: 500px;
-  border-radius: 10px;
+  background-color: var(--color2);
+}
+
+.replica-roja {
+  height: 60px;
+  width: 500px;
+  background-color: var(--color4);
 }

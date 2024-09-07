@@ -1,6 +1,6 @@
 p {
   text-wrap: pretty;
-  color: var(--color7);
+  color: var(--color6);
   font-family: "Barlow", sans-serif;
   font-weight: 600;
 }
@@ -9,6 +9,8 @@ p {
   display: flex;
   margin: 2rem auto;
   width: fit-content;
+  /*background-color: var(--color6);*/
+  border-radius: 10px;
 }
 
 #reloj > .pais {
