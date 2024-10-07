@@ -1,25 +1,86 @@
-:host {
-  --altura-barra: 60px;
-  --ancho-barra: 60px;
+* {
+  box-sizing: border-box;
 }
-nav {
+
+.elemento-nav {
   position: absolute;
-  bottom: -25dvh;
+  bottom: -30dvh;
+  height: 50px;
+  width: 460px;
   left: 50dvw;
+}
+
+.elemento-blend {
+  mix-blend-mode: screen;
+}
+
+nav {
   transform: translate(-50%, 0%);
-  background-color: var(--color3);
-  height: var(--altura-barra);
-  width: 500px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
 }
 
 .replica-azul {
-  height: 60px;
-  width: 500px;
   background-color: var(--color2);
+  transform: translate(calc(-50% + 2px), 2px);
 }
 
 .replica-roja {
-  height: 60px;
-  width: 500px;
+  background-color: var(--color5);
+  transform: translate(calc(-50% - 2px), -2px);
+}
+
+.replica-verde {
   background-color: var(--color4);
+  transform: translate(-50%, 0px);
+}
+
+.navegar-inicio {
+  height: 100%;
+  aspect-ratio: 1/1;
+  background-color: var(--color5);
+  border: none;
+}
+
+.division-nav {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  column-gap: 15px;
+}
+
+.division-nav > button {
+  cursor: pointer;
+  /* font-family: "Barlow", sans-serif; */
+  font-family: "Courier New", Courier, monospace;
+  font-style: italic;
+  font-weight: 900;
+  font-size: 20px;
+  border: none;
+  width: fit-content;
+  background: none;
+  color: var(--color5);
+  transition: transform 0.1s ease-out;
+}
+
+.division-nav > button::before {
+  position: absolute;
+  transition: transform 0.1s ease-out;
+  color: var(--color1);
+}
+
+.division-nav > button:hover::before {
+  transform: translate(0px, -5px) scale(1.1);
+}
+
+.navegar-experiencia::before {
+  content: "EXPERIENCIA";
+}
+.navegar-proyectos::before {
+  content: "PROYECTOS";
+}
+.navegar-contacto::before {
+  content: "CONTACTO";
 }
