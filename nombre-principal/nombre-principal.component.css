@@ -1,35 +1,56 @@
 div {
   margin-bottom: 30px;
   height: 270px;
+  width: 100%;
 }
 
 h1 {
+  cursor: default;
   position: absolute;
   text-align: center;
-  font-family: "Oswald", sans-serif;
-  font-weight: regular;
+  font-family: "Neon", sans-serif;
+  font-weight: normal;
   margin: 5px 0 5px;
   font-size: 100px;
   letter-spacing: 17px;
   line-height: 100px;
-  transform: translate(-50%, 0%);
-  left: 50dvw;
+  left: 50%;
   mix-blend-mode: screen;
 }
 
 .nombre-rojo,
 .apellido-rojo {
   color: var(--color5);
-  transform: translate(calc(-50% + 3px), -2px);
+  /* transform: translate(calc(-50% + 3px), -2px); */
+  transform: translate(-50%, 0px);
+  /* transition: transform 1.5s; */
+  animation: 1.5s ease-in infinite alternate movimiento-rojo;
 }
 .apellido-rojo {
   top: 150px;
 }
 
+/* div:hover > .nombre-rojo, */
+/* div:hover > .apellido-rojo { */
+/*   transform: translate(calc(-50% + 3px), -2px); */
+/* } */
+/**/
+/* div:hover > .nombre-azul, */
+/* div:hover > .apellido-azul { */
+/*   transform: translate(calc(-50% - 2px), 1px); */
+/* } */
+/**/
+/* div:hover > .nombre-verde, */
+/* div:hover > .apellido-verde { */
+/*   transform: translate(calc(-50% + 1px), 2px); */
+/* } */
+
 .nombre-azul,
 .apellido-azul {
   color: var(--color2);
-  transform: translate(calc(-50% - 2px), 1px);
+  /* transform: translate(calc(-50% - 2px), 1px); */
+  transform: translate(-50%, 0px);
+  animation: 1.5s ease-in infinite alternate movimiento-azul;
 }
 .apellido-azul {
   top: 150px;
@@ -38,8 +59,40 @@ h1 {
 .nombre-verde,
 .apellido-verde {
   color: var(--color4);
-  transform: translate(calc(-50% + 1px), 2px);
+  /* transform: translate(calc(-50% + 1px), 2px); */
+  transform: translate(-50%, 0px);
+  animation: 1.5s ease-in infinite alternate movimiento-verde;
 }
 .apellido-verde {
   top: 150px;
+}
+
+@keyframes movimiento-rojo {
+  from {
+    transform: translate(-50%, 0px);
+  }
+
+  to {
+    transform: translate(calc(-50% + 4px), -4px);
+  }
+}
+
+@keyframes movimiento-azul {
+  from {
+    transform: translate(-50%, 0px);
+  }
+
+  to {
+    transform: translate(calc(-50% - 4px), 2px);
+  }
+}
+
+@keyframes movimiento-verde {
+  from {
+    transform: translate(-50%, 0px);
+  }
+
+  to {
+    transform: translate(calc(-50% + 4px), 4px);
+  }
 }

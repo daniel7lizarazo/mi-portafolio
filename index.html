@@ -7,21 +7,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&display=swap"
-      rel="stylesheet"
+      rel="preconnect"
+      href="https://pub-d003df596eb74447bf4abe719613b283.r2.dev"
     />
     <link
+      rel="preconnect"
+      href="https://pub-d003df596eb74447bf4abe719613b283.r2.dev"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&display=swap"
       rel="stylesheet"
-      href="https://cf8216193f41977bbfec47974bba8de9.r2.cloudflarestorage.com/daniel-lizarazo-general/"
     />
     <title>Daniel Lizarazo</title>
   </head>
   <body>
-    <div id="app-reloj"></div>
-    <div id="app-nombre-principal"></div>
-    <p class="descripcion">Desarrollador web - Ingeniero mecánico</p>
-    <p class="descripcion">C# - Javascript - HTML - CSS - Go - SQL</p>
-    <div id="app-barra-navegacion"></div>
+    <div class="marco-ventana">
+      <div id="app-reloj"></div>
+      <div id="app-nombre-principal"></div>
+      <p class="descripcion">Desarrollador Web - Ingeniero Mecánico</p>
+      <p class="descripcion">C# - JavaScript - Go - HTML - CSS - SQL</p>
+      <div id="app-barra-navegacion"></div>
+    </div>
+
     <script type="module" src="/main.js"></script>
     <link rel="stylesheet" href="/style.css" />
 
@@ -34,6 +42,13 @@
         color: var(--color7);
         text-align: center;
         font-weight: 500;
+      }
+      .marco-ventana {
+        border: 2px solid var(--color3);
+        margin: 0 auto;
+        max-width: 1300px;
+        height: 550px;
+        max-height: 1000px;
       }
     </style>
   </body>
