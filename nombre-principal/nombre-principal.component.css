@@ -1,7 +1,6 @@
 div {
   margin-bottom: 30px;
   height: 270px;
-  width: 100%;
 }
 
 h1 {
@@ -21,36 +20,18 @@ h1 {
 .nombre-rojo,
 .apellido-rojo {
   color: var(--color5);
-  /* transform: translate(calc(-50% + 3px), -2px); */
   transform: translate(-50%, 0px);
-  /* transition: transform 1.5s; */
-  animation: 1.5s ease-in infinite alternate movimiento-rojo;
+  animation: 2.9s ease-in-out infinite alternate movimiento-rojo;
 }
 .apellido-rojo {
   top: 150px;
 }
 
-/* div:hover > .nombre-rojo, */
-/* div:hover > .apellido-rojo { */
-/*   transform: translate(calc(-50% + 3px), -2px); */
-/* } */
-/**/
-/* div:hover > .nombre-azul, */
-/* div:hover > .apellido-azul { */
-/*   transform: translate(calc(-50% - 2px), 1px); */
-/* } */
-/**/
-/* div:hover > .nombre-verde, */
-/* div:hover > .apellido-verde { */
-/*   transform: translate(calc(-50% + 1px), 2px); */
-/* } */
-
 .nombre-azul,
 .apellido-azul {
   color: var(--color2);
-  /* transform: translate(calc(-50% - 2px), 1px); */
   transform: translate(-50%, 0px);
-  animation: 1.5s ease-in infinite alternate movimiento-azul;
+  animation: 2.9s ease-in-out infinite alternate movimiento-azul;
 }
 .apellido-azul {
   top: 150px;
@@ -59,9 +40,8 @@ h1 {
 .nombre-verde,
 .apellido-verde {
   color: var(--color4);
-  /* transform: translate(calc(-50% + 1px), 2px); */
   transform: translate(-50%, 0px);
-  animation: 1.5s ease-in infinite alternate movimiento-verde;
+  animation: 2.9s ease-in-out infinite alternate movimiento-verde;
 }
 .apellido-verde {
   top: 150px;
@@ -71,9 +51,11 @@ h1 {
   from {
     transform: translate(-50%, 0px);
   }
-
+  40% {
+    transform: translate(calc(-50% + 1px), -1px);
+  }
   to {
-    transform: translate(calc(-50% + 4px), -4px);
+    transform: translate(calc(-50% + 2px), -2px);
   }
 }
 
@@ -81,9 +63,11 @@ h1 {
   from {
     transform: translate(-50%, 0px);
   }
-
+  20% {
+    transform: translate(calc(-50% - 1px), 0.5px);
+  }
   to {
-    transform: translate(calc(-50% - 4px), 2px);
+    transform: translate(calc(-50% - 2px), 1px);
   }
 }
 
@@ -91,8 +75,10 @@ h1 {
   from {
     transform: translate(-50%, 0px);
   }
-
+  30% {
+    transform: translate(calc(-50% + 1px), 1px);
+  }
   to {
-    transform: translate(calc(-50% + 4px), 4px);
+    transform: translate(calc(-50% + 2px), 2px);
   }
 }
