@@ -39,7 +39,7 @@ nav {
   height: 100%;
   aspect-ratio: 1/1;
   padding: 15px;
-  stroke-width: 1px;
+  stroke-width: 1.4px;
   stroke-linecap: round;
   stroke-linejoin: round;
   fill: none;
@@ -61,21 +61,21 @@ nav {
   stroke: var(--color4);
 }
 .icono-inicio-verde .icono-ojo {
-  fill: var(--color3);
+  fill: var(--color4);
 }
 
 .icono-ojo {
   r: 1.2;
 }
 .icono-pelo {
-  stroke-width: 0.7px;
+  stroke-width: 1px;
 }
 
 .navegar-inicio:hover .icono-inicio-rojo {
-  transform: translate(-1px, 1px);
+  transform: translate(-1.5px, 1.5px);
 }
 .navegar-inicio:hover .icono-inicio-azul {
-  transform: translate(1px, -1px);
+  transform: translate(1.5px, -1.5px);
 }
 
 .division-nav {
@@ -130,13 +130,13 @@ nav {
 }
 
 .division-nav a:hover > .opcion-nav-rojo {
-  transform: translate(1px, 1px);
+  transform: translate(1.5px, 1.5px);
 }
 
 .division-nav a:hover > .opcion-nav-azul {
-  transform: translate(-1px, -1px);
+  transform: translate(-1.5px, -1.5px);
 }
 
 .division-nav a:hover > .opcion-nav-verde {
-  transform: translate(1px, -1px);
+  transform: translate(1.5px, -1.5px);
 }

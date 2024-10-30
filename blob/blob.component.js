@@ -1,16 +1,11 @@
 import html from "./blob.component.html?inline";
 import css from "./blob.component.css?inline";
+import { amortiguador } from "../utils/utils";
 
 const template = document.createElement("template");
 template.innerHTML = `${html}<style>${css}</style>`;
 
 export const APP_CONTENT_TAG_NAME = "app-blob";
-
-// const opcionesTiempo = {
-//   timeZone: "America/Bogota",
-//   timeStyle: "short",
-//   hourCycle: "h24",
-// };
 
 export class AppContentComponent extends HTMLElement {
   constructor() {
@@ -21,33 +16,32 @@ export class AppContentComponent extends HTMLElement {
 
   connectedCallback() {
     const svgElement = this.shadowRoot.querySelector("svg");
-    let timerId;
-    let counter = 0;
-    let posX = 100;
-    let posY = 100;
-    const amortiguador = (fn, t) => {
-      if (timerId) {
-        return;
-      }
-      timerId = setTimeout(() => {
-        fn();
-        timerId = undefined;
-      }, t);
-    };
-    const mover = () => {
-      console.log(counter);
-      counter += 1;
-      posX -= 100;
-      posY -= 120;
-      svgElement.style.setProperty("--position-x", `${posX}px`);
-      svgElement.style.setProperty("--position-y", `${posY}px`);
-    };
+    let anchoVentana = window.innerWidth;
+    let posXN;
+    let posYN;
+    let colorHue = 280;
+    const mover = (e) => {
+      posXN = e.clientX - 350;
+      posYN = e.clientY - 250;
+      // 280 es el HUE del color inicial, morado
+      // 160 es el valor para centrar el cambio de color
+      // 80 es la distancia entre los hue: 280 (moraro) y 360 (rojo)
+      colorHue = (
+        280 +
+        ((svgElement.getBoundingClientRect().left + 160) / anchoVentana) * 80
+      ).toFixed(2);
 
-    document.addEventListener("mousemove", (e) => {
-      posX = e.clientX;
-      posY = e.clientY;
-      amortiguador(mover, 400);
-      // mover(e.clientX, e.clientY);
+      svgElement.style.setProperty("--position-x", `${posXN}px`);
+      svgElement.style.setProperty("--position-y", `${posYN}px`);
+      svgElement.style.setProperty(
+        "--color-relleno",
+        `hsl(${colorHue} 100% 50%)`,
+      );
+    };
+    const moverAmortiguado = amortiguador(mover, 200);
+    document.addEventListener("mousemove", moverAmortiguado);
+    window.addEventListener("resize", (_) => {
+      anchoVentana = window.innerWidth;
     });
   }
 }

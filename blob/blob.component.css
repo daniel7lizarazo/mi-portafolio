@@ -1,39 +1,25 @@
 :host {
   --position-x: 0px;
   --position-y: 0px;
+  --color-relleno: hsl(280 50% 50%);
 }
 svg {
   left: var(--position-x);
   top: var(--position-y);
   position: absolute;
   transform: rotate(0deg);
-  fill: white;
-  height: 300px;
-  filter: blur(40px);
+  fill: var(--color-relleno);
+  height: 270px;
+  filter: blur(60px);
   transition:
-    top 4s linear,
-    left 4s linear;
-  animation: 5s linear infinite running rotacion;
+    top 1s cubic-bezier(0.7, 1.2, 0.7, 1.2),
+    left 1s cubic-bezier(0.7, 1.2, 0.7, 1.2),
+    fill 0.2s linear;
+  animation: 10s linear infinite running rotacion;
 }
 
 @keyframes rotacion {
-  from {
-    fill: var(--color7);
-  }
-  20% {
-    fill: var(--color3);
-  }
-  40% {
-    fill: var(--color4);
-  }
-  60% {
-    fill: var(--color5);
-  }
-  80% {
-    fill: var(--color6);
-  }
   to {
-    fill: var(--color7);
     transform: rotate(360deg);
   }
 }

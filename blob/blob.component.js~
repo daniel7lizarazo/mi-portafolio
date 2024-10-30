@@ -6,12 +6,6 @@ template.innerHTML = `${html}<style>${css}</style>`;
 
 export const APP_CONTENT_TAG_NAME = "app-blob";
 
-// const opcionesTiempo = {
-//   timeZone: "America/Bogota",
-//   timeStyle: "short",
-//   hourCycle: "h24",
-// };
-
 export class AppContentComponent extends HTMLElement {
   constructor() {
     super();
@@ -32,6 +26,7 @@ export class AppContentComponent extends HTMLElement {
     document.addEventListener("mousemove", (e) => {
       mover(e.clientX, e.clientY);
     });
+
   }
 }
 

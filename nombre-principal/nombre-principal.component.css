@@ -15,6 +15,7 @@ h1 {
   line-height: 100px;
   left: 50%;
   mix-blend-mode: screen;
+  user-select: none;
 }
 
 .nombre-rojo,
