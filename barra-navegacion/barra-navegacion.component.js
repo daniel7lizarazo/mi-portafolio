@@ -1,5 +1,6 @@
 import html from "./barra-navegacion.component.html?inline";
 import css from "./barra-navegacion.component.css?inline";
+import { iniciarNavegacion } from "../utils/navigation.js";
 
 const template = document.createElement("template");
 template.innerHTML = `${html}<style>${css}</style>`;
@@ -13,7 +14,9 @@ export class AppContentComponent extends HTMLElement {
     this.shadowRoot?.appendChild(template.content.cloneNode(true));
   }
 
-  connectedCallback() {}
+  connectedCallback() {
+    iniciarNavegacion(this.shadowRoot);
+  }
 }
 
 export function incluirBarraNavegacion() {

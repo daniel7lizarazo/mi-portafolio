@@ -9,7 +9,7 @@
 }
 
 .contenedor-barra {
-  margin: 25px auto;
+  margin: 10px auto;
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -17,13 +17,12 @@
 }
 
 nav {
-  /* transform: translate(-50%, 0px); */
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
   padding: 0 15px 0 5px;
   width: fit-content;
-  margin: 25px auto;
+  margin: 10px auto;
 }
 
 .navegar-inicio {
@@ -87,14 +86,18 @@ nav {
 }
 
 .division-nav > a {
+  box-sizing: content-box;
   cursor: pointer;
   font-family: "Neon", Courier, monospace;
   font-style: normal;
   font-weight: 800;
   font-size: 20px;
-  width: fit-content;
+  width: max-content;
+  height: 25px;
+  padding-right: 22px;
   text-decoration: none;
   color: var(--color2);
+  z-index: 1;
 }
 
 .division-nav a > span {
@@ -139,4 +142,9 @@ nav {
 
 .division-nav a:hover > .opcion-nav-verde {
   transform: translate(1.5px, -1.5px);
+}
+
+span,
+svg {
+  pointer-events: none;
 }

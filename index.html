@@ -24,10 +24,17 @@
   <body>
     <div id="marco-ventana" class="marco-ventana">
       <div id="app-blob"></div>
-      <div id="app-reloj"></div>
-      <div id="app-nombre-principal"></div>
-      <p class="descripcion">Desarrollador Web - Ingeniero Mecánico</p>
-      <p class="descripcion">C# - JavaScript - Go - HTML - CSS - SQL</p>
+      <div class="contenido">
+        <div id="inicio" class="pagina">
+          <div id="app-reloj"></div>
+          <div id="app-nombre-principal"></div>
+          <p class="descripcion">Desarrollador Web - Ingeniero Mecánico</p>
+          <p class="descripcion">C# - JavaScript - Go - HTML - CSS - SQL</p>
+        </div>
+        <div id="experiencia" class="pagina">
+          <div id="app-experiencia"></div>
+        </div>
+      </div>
       <div id="app-barra-navegacion"></div>
     </div>
 
@@ -61,6 +68,14 @@
         transform: perspective(800px) rotateX(var(--rotacion-x))
           rotateY(var(--rotacion-y));
         transition: transform 2s cubic-bezier(0.7, 1.2, 0.7, 1.2);
+      }
+      #experiencia {
+        display: none;
+      }
+      .contenido {
+        height: 440px;
+        overflow: hidden;
+      }
     </style>
   </body>
 </html>

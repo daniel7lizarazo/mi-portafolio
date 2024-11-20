@@ -1,0 +1,85 @@
+div {
+  margin-bottom: 30px;
+  height: 270px;
+}
+
+h1 {
+  cursor: default;
+  position: absolute;
+  text-align: center;
+  font-family: "Neon", sans-serif;
+  font-weight: normal;
+  margin: 5px 0 5px;
+  font-size: 100px;
+  letter-spacing: 17px;
+  line-height: 100px;
+  left: 50%;
+  mix-blend-mode: screen;
+  user-select: none;
+}
+
+.nombre-rojo,
+.apellido-rojo {
+  color: var(--color5);
+  transform: translate(-50%, 0px);
+  animation: 2.9s ease-in-out infinite alternate movimiento-rojo;
+}
+.apellido-rojo {
+  top: 150px;
+}
+
+.nombre-azul,
+.apellido-azul {
+  color: var(--color2);
+  transform: translate(-50%, 0px);
+  animation: 2.9s ease-in-out infinite alternate movimiento-azul;
+}
+.apellido-azul {
+  top: 150px;
+}
+
+.nombre-verde,
+.apellido-verde {
+  color: var(--color4);
+  transform: translate(-50%, 0px);
+  animation: 2.9s ease-in-out infinite alternate movimiento-verde;
+}
+.apellido-verde {
+  top: 150px;
+}
+
+@keyframes movimiento-rojo {
+  from {
+    transform: translate(-50%, 0px);
+  }
+  40% {
+    transform: translate(calc(-50% + 1px), -1px);
+  }
+  to {
+    transform: translate(calc(-50% + 2px), -2px);
+  }
+}
+
+@keyframes movimiento-azul {
+  from {
+    transform: translate(-50%, 0px);
+  }
+  20% {
+    transform: translate(calc(-50% - 1px), 0.5px);
+  }
+  to {
+    transform: translate(calc(-50% - 2px), 1px);
+  }
+}
+
+@keyframes movimiento-verde {
+  from {
+    transform: translate(-50%, 0px);
+  }
+  30% {
+    transform: translate(calc(-50% + 1px), 1px);
+  }
+  to {
+    transform: translate(calc(-50% + 2px), 2px);
+  }
+}
