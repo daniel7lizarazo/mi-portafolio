@@ -15,10 +15,6 @@
       href="https://pub-d003df596eb74447bf4abe719613b283.r2.dev"
       crossorigin
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&display=swap"
-      rel="stylesheet"
-    />
     <title>Daniel Lizarazo</title>
   </head>
   <body>
@@ -33,6 +29,9 @@
         </div>
         <div id="experiencia" class="pagina">
           <div id="app-experiencia"></div>
+        </div>
+        <div id="proyectos" class="pagina">
+          <div id="app-proyectos"></div>
         </div>
       </div>
       <div id="app-barra-navegacion"></div>
@@ -69,7 +68,8 @@
           rotateY(var(--rotacion-y));
         transition: transform 2s cubic-bezier(0.7, 1.2, 0.7, 1.2);
       }
-      #experiencia {
+      #experiencia,
+      #inicio {
         display: none;
       }
       .contenido {

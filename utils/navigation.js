@@ -8,20 +8,19 @@ const rutas = {
 };
 
 // Obtener la ruta actual
-function obterRutaActual() {
+function obtenerRutaActual() {
   return window.location.pathname || "/";
 }
 
 // Funcion de navegacion
 function navegar(ruta) {
-  console.log("pasa por la ruta ", ruta);
   window.history.pushState({}, "", ruta);
   dibujarPagina();
 }
 
 // Funcion para dibujar la página
 function dibujarPagina() {
-  const rutaActual = obterRutaActual();
+  const rutaActual = obtenerRutaActual();
   const idPagina = rutas[rutaActual];
 
   // Ocultar todas las páginas
@@ -37,19 +36,25 @@ function dibujarPagina() {
   paginaActual.classList.add("aparecer");
 }
 
-// Event listeners
-// "host" for shawdow elements or "document" for regular ones
-export function iniciarNavegacion(host) {
+function alistarNavegacion(host) {
   window.addEventListener("popstate", dibujarPagina);
   host.querySelectorAll("a").forEach((link) => {
-    console.log(link);
     link.addEventListener("click", (evento) => {
-      console.log("pasa por iniciarNavegacion con el elemento", evento.target);
       evento.preventDefault();
       navegar(evento.target.getAttribute("href"));
     });
   });
+}
 
+function iniciarNavegacion(host) {
+  dibujarPagina();
+  alistarNavegacion(host);
+}
+
+// Event listeners
+// "host" para elementos en el shawdow DOM o "document" para elementos en el DOM
+export function iniciarNavegacionExterno(host) {
+  iniciarNavegacion(host);
   host.addEventListener("DOMContentLoaded", () => {
     dibujarPagina();
   });

@@ -1,3 +1,5 @@
+@import "/style.css";
+
 :host {
   --desface: 2px;
   --desface2: 4px;
@@ -71,10 +73,10 @@ nav {
 }
 
 .navegar-inicio:hover .icono-inicio-rojo {
-  transform: translate(-1.5px, 1.5px);
+  transform: translate(-2px, 2px);
 }
 .navegar-inicio:hover .icono-inicio-azul {
-  transform: translate(1.5px, -1.5px);
+  transform: translate(2px, 2px);
 }
 
 .division-nav {
@@ -88,21 +90,17 @@ nav {
 .division-nav > a {
   box-sizing: content-box;
   cursor: pointer;
-  font-family: "Neon", Courier, monospace;
-  font-style: normal;
   font-weight: 800;
   font-size: 20px;
   width: max-content;
   height: 25px;
   padding-right: 22px;
-  text-decoration: none;
   color: var(--color2);
-  z-index: 1;
 }
 
 .division-nav a > span {
   position: absolute;
-  bottom: 22px;
+  bottom: 5px;
   mix-blend-mode: screen;
   transition: transform 0.5s ease-out;
 }
@@ -118,7 +116,7 @@ nav {
   width: 125px;
 }
 .division-nav .navegar-contacto {
-  width: 100px;
+  width: 110px;
 }
 
 .opcion-nav-rojo {

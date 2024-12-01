@@ -1,3 +1,4 @@
+@import "/style.css";
 :host {
   --position-x: 0px;
   --position-y: 0px;

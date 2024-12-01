@@ -13,7 +13,37 @@ export class AppContentComponent extends HTMLElement {
     this.shadowRoot?.appendChild(template.content.cloneNode(true));
   }
 
-  connectedCallback() {}
+  connectedCallback() {
+    const imagenExperiencia1 = this.shadowRoot.querySelector(
+      ".imagen-experiencia-1",
+    );
+    const imagenExperiencia2 = this.shadowRoot.querySelector(
+      ".imagen-experiencia-2",
+    );
+    const imagenExperiencia3 = this.shadowRoot.querySelector(
+      ".imagen-experiencia-3",
+    );
+    const barraProgreso = this.shadowRoot.querySelector("#progreso");
+
+    this.shadowRoot
+      .querySelector(".experiencia-1")
+      .addEventListener("mouseover", () => {
+        imagenExperiencia1.classList.add("imagen-visible");
+        barraProgreso.style.left = "-600px";
+      });
+    this.shadowRoot
+      .querySelector(".experiencia-2")
+      .addEventListener("mouseover", () => {
+        imagenExperiencia2.classList.add("imagen-visible");
+        barraProgreso.style.left = "-350px";
+      });
+    this.shadowRoot
+      .querySelector(".experiencia-3")
+      .addEventListener("mouseover", () => {
+        imagenExperiencia3.classList.add("imagen-visible");
+        barraProgreso.style.left = "-100px";
+      });
+  }
 }
 
 export function incluirExperiencia() {

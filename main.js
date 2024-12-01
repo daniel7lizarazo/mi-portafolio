@@ -3,6 +3,7 @@ import { incluirNombrePrincipal } from "./nombre-principal/nombre-principal.comp
 import { incluirBarraNavegacion } from "./barra-navegacion/barra-navegacion.component.js";
 import { incluirBlob } from "./blob/blob.component.js";
 import { incluirExperiencia } from "./experiencia/experiencia.component.js";
+import { incluirProyectos } from "./proyectos/proyectos.component.js";
 import { adicionarPerspectivaMarco } from "./utils/ui.js";
 
 // Incluir elementos a la página principal
@@ -11,6 +12,7 @@ incluirNombrePrincipal();
 incluirBarraNavegacion();
 incluirBlob();
 incluirExperiencia();
+incluirProyectos();
 
 // Efectos UI
 adicionarPerspectivaMarco();

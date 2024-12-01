@@ -1,8 +1,7 @@
+@import "/style.css";
+
 p {
-  text-wrap: pretty;
   color: var(--color8);
-  font-family: "Xenon", sans-serif;
-  font-weight: 600;
 }
 
 #reloj {

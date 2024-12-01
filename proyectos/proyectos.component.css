@@ -1,0 +1,80 @@
+@import "/style.css";
+
+h2 {
+  font-family: "Neon", sans-serif;
+  text-wrap: balance;
+  font-weight: 800;
+  font-size: 16px;
+  margin: 5px 5px;
+}
+
+p {
+  color: var(--color1);
+  font-size: 14px;
+  margin: 5px 5px;
+}
+
+a {
+  text-decoration: none;
+  height: 100%;
+}
+
+.contenedor-proyectos {
+  margin: 20px auto;
+  width: fit-content;
+  display: grid;
+  grid-template-columns: 200px 500px;
+  grid-template-rows: 150px 250px;
+  grid-template-areas:
+    "proyecto1 proyecto2"
+    "proyecto3 proyecto4";
+  transition:
+    grid-template-rows 0.5s,
+    grid-template-columns 0.5s;
+}
+
+.contenedor-proyectos a {
+  background-clip: padding-box;
+  align-content: end;
+}
+
+.contenedor-proyectos:has(.proyecto-1:hover) {
+  grid-template-columns: 250px 450px;
+  grid-template-rows: 200px 200px;
+}
+
+.contenedor-proyectos:has(.proyecto-2:hover) {
+  grid-template-columns: 150px 550px;
+  grid-template-rows: 200px 200px;
+}
+
+.contenedor-proyectos:has(.proyecto-3:hover) {
+  grid-template-columns: 250px 450px;
+  grid-template-rows: 100px 300px;
+}
+
+.contenedor-proyectos:has(.proyecto-4:hover) {
+  grid-template-columns: 150px 550px;
+  grid-template-rows: 100px 300px;
+}
+
+.proyecto-1 {
+  background-image: url(https://images.unsplash.com/photo-1729180253305-23990aee8705?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  grid-area: proyecto1;
+}
+.proyecto-2 {
+  background-image: url(https://images.unsplash.com/photo-1516093491926-a4c43060540a?q=80&w=2051&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  grid-area: proyecto2;
+}
+.proyecto-3 {
+  background-image: url(https://images.unsplash.com/photo-1728848447870-df8f93317cd2?q=80&w=1886&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  grid-area: proyecto3;
+}
+.proyecto-4 {
+  background-image: url(https://pub-d003df596eb74447bf4abe719613b283.r2.dev/PrevioNextServices-md.png);
+  grid-area: proyecto4;
+}
+
+.proyecto-4 > p {
+  width: 200px;
+}
