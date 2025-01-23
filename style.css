@@ -9,6 +9,7 @@
   --color6: hsl(283, 100%, 73%);
   --color7: hsl(58, 69%, 54%);
   --color8: hsl(227, 100%, 100%);
+  --color8low: hsla(227, 100%, 100%, 50%);
 }
 
 html {
@@ -28,13 +29,17 @@ body {
   max-height: 100dvh;
   min-width: 100%;
   margin: 0;
+  scrollbar-color: transparent transparent;
+  scrollbar-width: none;
 }
 
 h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+label {
+  color: var(--color8);
   font-family: "Neon", sans-serif;
   text-wrap: balance;
 }
@@ -43,11 +48,22 @@ a {
   text-decoration: none;
 }
 
-p, a {
+p,
+a {
+  color: var(--color8);
   text-wrap: pretty;
   font-family: "Xenon", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  color: var(--color8);
 }
 
 /* Reset */

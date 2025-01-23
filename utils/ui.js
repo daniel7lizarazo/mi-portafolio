@@ -6,14 +6,14 @@ export function adicionarPerspectivaMarco() {
   let altoVentana = window.innerHeight;
   let anchoVentana = window.innerWidth;
   const cambioPerspectiva = (e) => {
-    rotacionXNorm = ((e.clientY / altoVentana - 0.5) * -5).toFixed(2);
-    rotacionYNorm = ((e.clientX / anchoVentana - 0.5) * 5).toFixed(2);
+    rotacionXNorm = ((e.clientY / altoVentana - 0.5) * 9).toFixed(2);
+    rotacionYNorm = ((e.clientX / anchoVentana - 0.5) * -9).toFixed(2);
     elementoMarco.style.setProperty("--rotacion-x", `${rotacionXNorm}deg`);
     elementoMarco.style.setProperty("--rotacion-y", `${rotacionYNorm}deg`);
   };
-  const cambioPerspectivaAmortiguado = amortiguador(cambioPerspectiva, 400);
+  const cambioPerspectivaAmortiguado = amortiguador(cambioPerspectiva, 100);
   document.addEventListener("mousemove", cambioPerspectivaAmortiguado);
-  window.addEventListener("resize", (e) => {
+  window.addEventListener("resize", () => {
     altoVentana = window.innerHeight;
     anchoVentana = window.innerWidth;
   });

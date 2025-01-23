@@ -6,9 +6,8 @@ p {
 
 #reloj {
   display: flex;
-  margin: 2rem auto;
+  margin: 20px auto 0px;
   width: fit-content;
-  /*background-color: var(--color6);*/
   border-radius: 10px;
 }
 

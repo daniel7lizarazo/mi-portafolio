@@ -1,0 +1,60 @@
+@import "/style.css";
+
+.contacto-texto {
+  width: 300px;
+  margin: 20px 150px;
+}
+
+h1 {
+  cursor: default;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  & label {
+    color: var(--color7);
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+  & input {
+    padding: 2px 5px;
+    margin-bottom: 10px;
+    background: var(--color9);
+    border-color: var(--color8low);
+    &:focus-visible {
+      border-radius: 2px;
+      outline: 2px var(--color8) auto;
+    }
+  }
+  & textarea {
+    resize: none;
+    padding: 2px 2px;
+    margin-bottom: 10px;
+    background: var(--color9);
+    border-color: var(--color8low);
+    &:focus-visible {
+      border-radius: 2px;
+      outline: 2px var(--color8) auto;
+    }
+  }
+  & button {
+    background-color: transparent;
+    border-color: var(--color7);
+    color: var(--color7);
+    height: 30px;
+    transition: background-color 0.5s;
+    &:hover,
+    &:focus-visible {
+      cursor: pointer;
+      outline: 2px var(--color7) solid;
+      border-radius: 2px;
+    }
+  }
+}

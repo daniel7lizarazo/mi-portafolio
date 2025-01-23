@@ -10,13 +10,14 @@
     "barra-progreso barra-progreso barra-progreso"
     "img-exp-1 exp2 img-exp-3";
   width: fit-content;
-  margin: 20px auto;
+  margin: 0px auto;
 }
 
 img {
   aspect-ratio: 1/1;
-  width: 150px;
-  padding-block: 10px;
+  width: 50px;
+  margin-block: 10px;
+  border-radius: 5px;
   filter: blur(10px);
   opacity: 0;
   transition:
@@ -39,6 +40,7 @@ img {
 }
 .imagen-experiencia-2 {
   grid-area: img-exp-2;
+  align-self: flex-end;
 }
 .imagen-experiencia-3 {
   grid-area: img-exp-3;
@@ -133,7 +135,7 @@ p {
   transition: left 1s ease-out;
 }
 .imagen-visible {
-  width: 190px;
+  width: 150px;
   opacity: 1;
   filter: blur(0px);
 }

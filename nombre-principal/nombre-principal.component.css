@@ -1,5 +1,5 @@
 div {
-  margin-bottom: 30px;
+  margin-block: 40px 30px;
   height: 270px;
 }
 
@@ -22,7 +22,7 @@ h1 {
 .apellido-rojo {
   color: var(--color5);
   transform: translate(-50%, 0px);
-  animation: 2.9s ease-in-out infinite alternate movimiento-rojo;
+  animation: 3s ease-in-out infinite alternate movimiento-rojo;
 }
 .apellido-rojo {
   top: 150px;
@@ -32,7 +32,7 @@ h1 {
 .apellido-azul {
   color: var(--color2);
   transform: translate(-50%, 0px);
-  animation: 2.9s ease-in-out infinite alternate movimiento-azul;
+  animation: 3s ease-in-out infinite alternate movimiento-azul;
 }
 .apellido-azul {
   top: 150px;
@@ -42,44 +42,44 @@ h1 {
 .apellido-verde {
   color: var(--color4);
   transform: translate(-50%, 0px);
-  animation: 2.9s ease-in-out infinite alternate movimiento-verde;
+  animation: 3s ease-in-out infinite alternate movimiento-verde;
 }
 .apellido-verde {
   top: 150px;
 }
 
 @keyframes movimiento-rojo {
-  from {
+  50% {
     transform: translate(-50%, 0px);
   }
-  40% {
-    transform: translate(calc(-50% + 1px), -1px);
+  80% {
+    transform: translate(calc(-50% + 2px), -2px);
   }
   to {
-    transform: translate(calc(-50% + 2px), -2px);
+    transform: translate(calc(-50% + 4px), -4px);
   }
 }
 
 @keyframes movimiento-azul {
-  from {
+  50% {
     transform: translate(-50%, 0px);
   }
-  20% {
-    transform: translate(calc(-50% - 1px), 0.5px);
+  80% {
+    transform: translate(calc(-50% - 2px), 1px);
   }
   to {
-    transform: translate(calc(-50% - 2px), 1px);
+    transform: translate(calc(-50% - 4px), 2px);
   }
 }
 
 @keyframes movimiento-verde {
-  from {
+  50% {
     transform: translate(-50%, 0px);
   }
-  30% {
-    transform: translate(calc(-50% + 1px), 1px);
+  80% {
+    transform: translate(calc(-50% + 2px), 2px);
   }
   to {
-    transform: translate(calc(-50% + 2px), 2px);
+    transform: translate(calc(-50% + 4px), 4px);
   }
 }

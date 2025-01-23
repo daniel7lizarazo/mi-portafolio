@@ -11,7 +11,7 @@
 }
 
 .contenedor-barra {
-  margin: 10px auto;
+  margin: 0px auto;
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -24,7 +24,7 @@ nav {
   justify-content: space-between;
   padding: 0 15px 0 5px;
   width: fit-content;
-  margin: 10px auto;
+  margin: 0px auto;
 }
 
 .navegar-inicio {
@@ -72,10 +72,12 @@ nav {
   stroke-width: 1px;
 }
 
-.navegar-inicio:hover .icono-inicio-rojo {
+.navegar-inicio:hover .icono-inicio-rojo,
+.link-actual > .icono-inicio-rojo {
   transform: translate(-2px, 2px);
 }
-.navegar-inicio:hover .icono-inicio-azul {
+.navegar-inicio:hover .icono-inicio-azul,
+.link-actual > .icono-inicio-azul {
   transform: translate(2px, 2px);
 }
 
@@ -100,7 +102,7 @@ nav {
 
 .division-nav a > span {
   position: absolute;
-  bottom: 5px;
+  bottom: 0px;
   mix-blend-mode: screen;
   transition: transform 0.5s ease-out;
 }
@@ -130,15 +132,18 @@ nav {
   color: var(--color4);
 }
 
-.division-nav a:hover > .opcion-nav-rojo {
+.division-nav a:hover > .opcion-nav-rojo,
+.link-actual > .opcion-nav-rojo {
   transform: translate(1.5px, 1.5px);
 }
 
-.division-nav a:hover > .opcion-nav-azul {
+.division-nav a:hover > .opcion-nav-azul,
+.link-actual > .opcion-nav-azul {
   transform: translate(-1.5px, -1.5px);
 }
 
-.division-nav a:hover > .opcion-nav-verde {
+.division-nav a:hover > .opcion-nav-verde,
+.link-actual > .opcion-nav-verde {
   transform: translate(1.5px, -1.5px);
 }
 

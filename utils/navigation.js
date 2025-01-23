@@ -7,6 +7,8 @@ const rutas = {
   "/contacto": "contacto",
 };
 
+let links;
+
 // Obtener la ruta actual
 function obtenerRutaActual() {
   return window.location.pathname || "/";
@@ -36,19 +38,34 @@ function dibujarPagina() {
   paginaActual.classList.add("aparecer");
 }
 
-function alistarNavegacion(host) {
+function alistarNavegacion() {
   window.addEventListener("popstate", dibujarPagina);
-  host.querySelectorAll("a").forEach((link) => {
+  links.forEach((link) => {
     link.addEventListener("click", (evento) => {
       evento.preventDefault();
+      links.forEach((otherLink) => {
+        otherLink.classList.remove("link-actual");
+      });
+      link.classList.add("link-actual");
       navegar(evento.target.getAttribute("href"));
     });
   });
 }
 
+function aplicarEstiloInicialNavLinks() {
+  const rutaActual = obtenerRutaActual();
+  links.forEach((linkToStyle) => {
+    if (rutaActual === linkToStyle.getAttribute("href")) {
+      linkToStyle.classList.add("link-actual");
+    }
+  });
+}
+
 function iniciarNavegacion(host) {
+  links = host.querySelectorAll("a");
   dibujarPagina();
-  alistarNavegacion(host);
+  alistarNavegacion();
+  aplicarEstiloInicialNavLinks();
 }
 
 // Event listeners
