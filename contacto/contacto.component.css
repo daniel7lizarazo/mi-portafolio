@@ -2,7 +2,17 @@
 
 .contacto-texto {
   width: 300px;
-  margin: 20px 150px;
+  margin: 20px 0px;
+}
+
+.contacto-imagen {
+  width: 600px;
+}
+
+.contacto-contenedor {
+  margin: 0 auto;
+  width: 900px;
+  display: flex;
 }
 
 h1 {
@@ -57,4 +67,10 @@ form {
       border-radius: 2px;
     }
   }
+}
+
+img {
+  width: 250px;
+  object-fit: cover;
+  float: right;
 }
