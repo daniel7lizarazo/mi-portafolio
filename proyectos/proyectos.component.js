@@ -56,7 +56,7 @@ export class AppContentComponent extends HTMLElement {
           ?.classList.remove("proyecto-actual");
 
         this.shadowRoot
-          .querySelector(`a[href="#${e.snapTargetInline.id}"]`)
+          .querySelector(`li > a[href="#${e.snapTargetInline.id}"]`)
           .classList.add("proyecto-actual");
       });
   }

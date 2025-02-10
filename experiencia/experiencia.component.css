@@ -122,7 +122,7 @@ p {
   align-self: center;
   height: 5px;
   width: 700px;
-  border: 2px var(--color8) solid;
+  border: 2px var(--color6) solid;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -131,7 +131,7 @@ p {
   width: 800px;
   height: 20px;
   left: -800px;
-  background-color: var(--color8);
+  background-color: var(--color6);
   transition: left 1s ease-out;
 }
 .imagen-visible {

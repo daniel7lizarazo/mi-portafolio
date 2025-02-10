@@ -5,26 +5,72 @@
       De tus proyectos y como puedo aportar en ellos, o para cotizaciones.
       Puedes llenar el formulario o contactarme a mi celular.
     </p>
-    <form>
-      <label for="nombre">Nombre</label>
-      <input type="text" name="nombre" autocomplete value="" />
-      <label for="correo">Correo</label>
-      <input type="email" name="correo" value="" />
-      <label for="mensaje">Mensaje</label>
-      <textarea type="textarea" name="mensaje" value="" rows="3"> </textarea>
+    <form id="formulario-contacto">
+      <fieldset form="formulario-contacto" name="nombre">
+        <label for="nombre">Nombre*</label>
+        <input type="text" name="nombre" autocomplete value="" required />
+      </fieldset>
+      <fieldset form="formulario-contacto" name="correo">
+        <label for="correo">Correo*</label>
+        <input type="email" name="correo" value="" required />
+      </fieldset>
+      <fieldset form="formulario-contacto" name="mensaje">
+        <label for="mensaje">Mensaje*</label>
+        <textarea
+          type="text"
+          required
+          value=""
+          minlength="2"
+          maxlength="200"
+          name="mensaje"
+          rows="3"
+        ></textarea>
+      </fieldset>
       <button type="submit">Enviar</button>
     </form>
   </div>
   <div class="contacto-imagen">
+    <a class="boton-chat" href="https://wa.me/573168669901">
+      <svg
+        class="icono-chat"
+        xmlns="http://www.w3.org/2000/svg"
+        xml:space="preserve"
+        viewBox="0 0 168.9 168.9"
+      >
+        <g transform="translate(-17.2 -63.5)">
+          <circle cx="101.7" cy="147.9" />
+          <circle class="icono-circulo-1" cx="101.7" cy="147.9" />
+          <circle class="icono-circulo-2" cx="101.7" cy="147.9" />
+          <circle class="icono-circulo-3" cx="101.7" cy="147.9" />
+          <circle class="icono-circulo-4" cx="101.7" cy="147.9" />
+          <circle class="icono-circulo-5" cx="101.7" cy="147.9" />
+          <g fill="none" stroke-width="1.5">
+            <path
+              class="icono-burbuja"
+              d="M101.7 194.5a46.6 46.6 0 1 0-41.8-25.8c.9 1.6 1.1 3.5.7 5.3l-2.8 10.4a6 6 0 0 0 7.4 7.4l10.4-2.8c1.8-.4 3.7-.2 5.3.7a46.4 46.4 0 0 0 20.8 4.8z"
+            />
+            <path class="icono-texto" d="M83 157.2h25.7M83 141h37.3" />
+          </g>
+        </g>
+      </svg>
+      <p>ESCRIBEME</p>
+    </a>
+    <svg
+      class="icono-cuadrado icono-cuadrado-rojo"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 113.4 113.4"
+    >
+      <rect x="121.6" y="-10" ry="10" transform="rotate(45 76.8 -89.3)" />
+    </svg>
     <img
       class="foto-formal"
       src="https://pub-d003df596eb74447bf4abe719613b283.r2.dev/foto-formal-contacto.png"
-      alt="Foto de medio cuerpo de Daniel Lizarazo"
+      alt="Foto de medio cuerpo de Daniel Lizarazo con los brazos cruzados"
     />
     <img
-      class="foto-señalando"
-      src="https://pub-d003df596eb74447bf4abe719613b283.r2.dev/foto-dedo-contacto.png"
-      alt="Foto de medio cuerpo de Daniel Lizarazo"
+      class="foto-apuntando"
+      src="https://pub-d003df596eb74447bf4abe719613b283.r2.dev/foto-apuntando-contacto.png"
+      alt="Foto de medio cuerpo de Daniel Lizarazo señalando el botón de whatsapp"
     />
   </div>
 </div>

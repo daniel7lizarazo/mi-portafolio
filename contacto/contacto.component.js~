@@ -1,6 +1,6 @@
-import emailjs from "@emailjs/browser";
-import css from "./contacto.component.css?inline";
 import html from "./contacto.component.html?inline";
+import css from "./contacto.component.css?inline";
+import emailjs from "@emailjs/browser";
 
 const template = document.createElement("template");
 template.innerHTML = `${html}<style>${css}</style>`;
@@ -27,8 +27,8 @@ export class AppContentComponent extends HTMLElement {
           .sendForm("contacto_portafolio", "formulario_portafolio", this)
           .then(
             () => {
-              this.classList.add("formulario-enviado");
-              this.querySelector("button").innerHTML = "Enviado";
+              console.log(event.target);
+              console.log("Enviado.");
             },
             (error) => {
               console.log("No se pudo enviar.", error);

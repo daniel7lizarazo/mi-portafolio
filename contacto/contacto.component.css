@@ -28,33 +28,40 @@ p {
 form {
   display: flex;
   flex-direction: column;
-  & label {
-    color: var(--color7);
-    font-size: 12px;
-    margin-bottom: 4px;
-  }
-  & input {
-    padding: 2px 5px;
-    margin-bottom: 10px;
-    background: var(--color9);
-    border-color: var(--color8low);
-    &:focus-visible {
-      border-radius: 2px;
-      outline: 2px var(--color8) auto;
+  position: relative;
+  & fieldset {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    & label {
+      color: var(--color7);
+      font-size: 12px;
+      margin-bottom: 4px;
     }
-  }
-  & textarea {
-    resize: none;
-    padding: 2px 2px;
-    margin-bottom: 10px;
-    background: var(--color9);
-    border-color: var(--color8low);
-    &:focus-visible {
-      border-radius: 2px;
-      outline: 2px var(--color8) auto;
+    & input {
+      padding: 2px 5px;
+      margin-bottom: 10px;
+      background: var(--color9);
+      border-color: var(--color8low);
+      &:focus-visible {
+        border-radius: 2px;
+        outline: 2px var(--color8) auto;
+      }
+    }
+    & textarea {
+      resize: none;
+      padding: 2px 2px;
+      margin-bottom: 10px;
+      background: var(--color9);
+      border-color: var(--color8low);
+      &:focus-visible {
+        border-radius: 2px;
+        outline: 2px var(--color8) auto;
+      }
     }
   }
   & button {
+    content: "ENVIAR";
     background-color: transparent;
     border-color: var(--color7);
     color: var(--color7);
@@ -70,7 +77,128 @@ form {
 }
 
 img {
-  width: 250px;
+  width: 210px;
   object-fit: cover;
   float: right;
+}
+
+.foto-apuntando {
+  position: absolute;
+  width: 380px;
+  right: -15px;
+  visibility: hidden;
+}
+
+.boton-chat {
+  position: absolute;
+  top: 150px;
+  left: 100px;
+  width: fit-content;
+  & p {
+    text-align: center;
+    color: var(--color7);
+    font-weight: 800;
+    font-family: "Neon", sans-serif;
+  }
+  & .icono-chat {
+    border-radius: 50%;
+    height: 120px;
+    & circle {
+      fill: var(--color7);
+      r: 70;
+    }
+    & .icono-burbuja {
+      stroke: var(--color8);
+      stroke-width: 10px;
+    }
+    & .icono-texto {
+      stroke: var(--color1);
+      opacity: 0.5;
+      stroke-linecap: round;
+      stroke-width: 10px;
+    }
+    & .icono-circulo-1 {
+      animation: 4s infinite running pulso;
+    }
+    & .icono-circulo-2 {
+      animation: 4s 1s infinite running pulso;
+    }
+    & .icono-circulo-3 {
+      animation: 4s 2s infinite running pulso;
+    }
+    & .icono-circulo-4 {
+      animation: 4s 3s infinite running pulso;
+    }
+    & .icono-circulo-5 {
+      animation: 4s 4s infinite running pulso;
+    }
+  }
+}
+
+.contacto-imagen:has(.boton-chat:hover) > .foto-apuntando {
+  visibility: visible;
+}
+
+.contacto-imagen:has(.boton-chat:hover) > .foto-formal {
+  visibility: hidden;
+}
+
+.icono-cuadrado {
+  mix-blend-mode: screen;
+  & rect {
+    height: 80px;
+    width: 80px;
+  }
+}
+
+.icono-cuadrado-rojo {
+  position: absolute;
+  top: 50px;
+  right: -50px;
+  width: 350px;
+  & rect {
+    fill: var(--color7);
+  }
+}
+
+@keyframes pulso {
+  from {
+  }
+  to {
+    r: 100;
+    opacity: 0;
+  }
+}
+
+fieldset:has(input:user-invalid) > label,
+fieldset:has(textarea:user-invalid) > label {
+  color: var(--color5);
+}
+
+form:has(fieldset > input:user-invalid) > button,
+form:has(fieldset > textarea:user-invalid) > button {
+  border-color: var(--color5);
+  color: var(--color5);
+  outline-color: var(--color5);
+}
+
+.formulario-enviado {
+  & fieldset {
+    color: var(--color7);
+    & input {
+      color: var(--color8low);
+      pointer-events: none;
+    }
+    & textarea {
+      color: var(--color8low);
+      pointer-events: none;
+    }
+  }
+  & button {
+    background-color: var(--color7);
+    border-color: var(--color7);
+    color: var(--color8);
+    pointer-events: none;
+    content: "ENVIADO";
+  }
 }
