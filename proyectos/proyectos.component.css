@@ -88,14 +88,13 @@
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-
-  mask-image: linear-gradient(
-    to right,
-    transparent 10%,
-    black,
-    black 55%,
-    transparent
-  );
+  /* mask-image: linear-gradient( */
+  /*   to right, */
+  /*   transparent -10%, */
+  /*   black, */
+  /*   black 70%, */
+  /*   transparent */
+  /* ); */
   & > section {
     flex-shrink: 0;
     border-radius: 10px;
