@@ -16,6 +16,11 @@ export class AppContentComponent extends HTMLElement {
 
   connectedCallback() {
     iniciarNavegacionExterno(this.shadowRoot);
+    const menuCel = this.shadowRoot.getElementById("boton-menu-cel");
+
+    menuCel?.addEventListener("mousedown", (event) => {
+      menuCel.classList.toggle("active");
+    });
   }
 }
 

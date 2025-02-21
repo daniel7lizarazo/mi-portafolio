@@ -8,6 +8,7 @@ const rutas = {
 };
 
 let links;
+let menuCel;
 
 // Obtener la ruta actual
 function obtenerRutaActual() {
@@ -47,6 +48,7 @@ function alistarNavegacion() {
         otherLink.classList.remove("link-actual");
       });
       link.classList.add("link-actual");
+      menuCel.classList.toggle("active");
       navegar(evento.target.getAttribute("href"));
     });
   });
@@ -66,6 +68,7 @@ function iniciarNavegacion(host) {
   dibujarPagina();
   alistarNavegacion();
   aplicarEstiloInicialNavLinks();
+  menuCel = host.getElementById("boton-menu-cel");
 }
 
 // Event listeners

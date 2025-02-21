@@ -83,3 +83,29 @@ h1 {
     transform: translate(calc(-50% + 4px), 4px);
   }
 }
+
+@media (max-width: 400px) {
+  div {
+    margin-block: 120px 100px;
+    height: 150px;
+  }
+
+  h1 {
+    position: absolute;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 10px;
+  }
+
+  .apellido-rojo {
+    top: 80px;
+  }
+
+  .apellido-azul {
+    top: 80px;
+  }
+
+  .apellido-verde {
+    top: 80px;
+  }
+}

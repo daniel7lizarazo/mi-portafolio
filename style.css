@@ -50,7 +50,8 @@ a {
 }
 
 p,
-a {
+a,
+span {
   color: var(--color8);
   text-wrap: pretty;
   font-family: "Xenon", sans-serif;

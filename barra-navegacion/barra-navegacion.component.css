@@ -6,10 +6,6 @@
   --desfaceNegativo: -2px;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 .contenedor-barra {
   margin: 0px auto;
   position: relative;
@@ -34,6 +30,50 @@ nav {
   border: none;
 }
 
+.menu-cel {
+  background-color: transparent;
+  width: 90px;
+  aspect-ratio: 1/1;
+  border: none;
+  margin-right: 20px;
+  transition: transform 0.5s;
+
+  & .icono-inicio-cel {
+    bottom: 0px;
+    right: 0px;
+    mix-blend-mode: screen;
+    position: absolute;
+    height: 100%;
+    aspect-ratio: 1/1;
+    padding: 10px;
+    stroke-width: 1.4px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    transition: transform 0.5s;
+  }
+
+  & .icono-inicio-rojo-cel {
+    transform: translate(-2px, 2px);
+  }
+
+  & .icono-inicio-azul-cel {
+    transform: translate(2px, 2px);
+  }
+}
+
+.menu-cel.active {
+  transform: scale(0.8);
+
+  & .icono-inicio-rojo-cel {
+    transform: translate(0px, 0px);
+  }
+
+  & .icono-inicio-azul-cel {
+    transform: translate(0px, 0px);
+  }
+}
+
 .icono-inicio {
   mix-blend-mode: screen;
   position: absolute;
@@ -46,28 +86,41 @@ nav {
   fill: none;
   transition: transform 0.5s linear;
 }
-.icono-inicio-rojo {
+
+.icono-inicio-rojo,
+.icono-inicio-rojo-cel {
   stroke: var(--color5);
 }
-.icono-inicio-rojo .icono-ojo {
+
+.icono-inicio-rojo .icono-ojo,
+.icono-inicio-rojo-cel .icono-ojo {
   fill: var(--color5);
 }
-.icono-inicio-azul {
+
+.icono-inicio-azul,
+.icono-inicio-azul-cel {
   stroke: var(--color2);
 }
-.icono-inicio-azul .icono-ojo {
+
+.icono-inicio-azul .icono-ojo,
+.icono-inicio-azul-cel .icono-ojo {
   fill: var(--color2);
 }
-.icono-inicio-verde {
+
+.icono-inicio-verde,
+.icono-inicio-verde-cel {
   stroke: var(--color4);
 }
-.icono-inicio-verde .icono-ojo {
+
+.icono-inicio-verde .icono-ojo,
+.icono-inicio-verde-cel .icono-ojo {
   fill: var(--color4);
 }
 
 .icono-ojo {
   r: 1.2;
 }
+
 .icono-pelo {
   stroke-width: 1px;
 }
@@ -76,6 +129,7 @@ nav {
 .link-actual > .icono-inicio-rojo {
   transform: translate(-2px, 2px);
 }
+
 .navegar-inicio:hover .icono-inicio-azul,
 .link-actual > .icono-inicio-azul {
   transform: translate(2px, 2px);
@@ -87,6 +141,12 @@ nav {
   justify-content: space-evenly;
   align-items: center;
   column-gap: 50px;
+  & .navegar-inicio-cel {
+    display: none;
+  }
+  & .menu-cel {
+    display: none;
+  }
 }
 
 .division-nav > a {
@@ -150,4 +210,122 @@ nav {
 span,
 svg {
   pointer-events: none;
+}
+
+@media (max-width: 400px) {
+  .contenedor-barra {
+    height: 60px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 0 0px 0 0px;
+    width: 100%;
+    margin: 0px;
+  }
+
+  .navegar-inicio {
+    width: 80px;
+    margin-right: 15px;
+    aspect-ratio: 1/1;
+    border: none;
+    & .icono-inicio {
+      display: none;
+    }
+  }
+
+  .navegar-inicio:hover .icono-inicio-rojo,
+  .link-actual > .icono-inicio-rojo {
+    transform: translate(-2px, 2px);
+  }
+
+  .navegar-inicio:hover .icono-inicio-azul,
+  .link-actual > .icono-inicio-azul {
+    transform: translate(2px, 2px);
+  }
+
+  .division-nav {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 50px;
+    width: 100%;
+
+    & .navegar-inicio-cel {
+      display: inline-block;
+    }
+
+    & .menu-cel {
+      display: block;
+    }
+
+    & button {
+      position: absolute;
+    }
+
+    & a {
+      display: inline-block;
+      position: absolute;
+      pointer-events: none;
+      opacity: 0;
+      box-sizing: content-box;
+      cursor: pointer;
+      font-weight: 800;
+      font-size: 20px;
+      width: max-content;
+      height: 25px;
+      color: var(--color2);
+      transition:
+        opacity 0.5s,
+        transform 0.5s;
+
+      & span {
+        bottom: 0px;
+        mix-blend-mode: screen;
+        transition: transform 0.5s ease-out;
+      }
+    }
+
+    & .navegar-inicio-cel {
+      width: 100px;
+    }
+
+    & .navegar-experiencia {
+      width: 150px;
+    }
+
+    & .navegar-proyectos {
+      width: 155px;
+    }
+
+    & .navegar-contacto {
+      width: 150px;
+    }
+  }
+
+  .division-nav:has(.menu-cel.active) {
+    & a {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    & .navegar-inicio-cel {
+      transform: translate(-0px, -100px);
+    }
+
+    & .navegar-experiencia {
+      transform: translate(-60px, -60px);
+    }
+
+    & .navegar-proyectos {
+      transform: translate(-80px, -20px);
+    }
+
+    & .navegar-contacto {
+      transform: translate(-60px, 20px);
+    }
+  }
 }
