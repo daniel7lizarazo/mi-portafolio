@@ -21,6 +21,12 @@ export class AppContentComponent extends HTMLElement {
     menuCel?.addEventListener("mousedown", (event) => {
       menuCel.classList.toggle("active");
     });
+
+    this.shadowRoot.querySelectorAll("a")?.forEach((anchor) => {
+      anchor.addEventListener("click", (e) => {
+        menuCel.classList.toggle("active");
+      });
+    });
   }
 }
 

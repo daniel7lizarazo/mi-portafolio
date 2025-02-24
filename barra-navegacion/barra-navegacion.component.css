@@ -32,7 +32,7 @@ nav {
 
 .menu-cel {
   background-color: transparent;
-  width: 90px;
+  width: 70px;
   aspect-ratio: 1/1;
   border: none;
   margin-right: 20px;
@@ -274,10 +274,11 @@ svg {
       box-sizing: content-box;
       cursor: pointer;
       font-weight: 800;
-      font-size: 20px;
+      font-size: 15px;
       width: max-content;
       height: 25px;
       color: var(--color2);
+      padding-right: 0px;
       transition:
         opacity 0.5s,
         transform 0.5s;
@@ -290,19 +291,19 @@ svg {
     }
 
     & .navegar-inicio-cel {
-      width: 100px;
+      width: 70px;
     }
 
     & .navegar-experiencia {
-      width: 150px;
+      width: 100px;
     }
 
     & .navegar-proyectos {
-      width: 155px;
+      width: 100px;
     }
 
     & .navegar-contacto {
-      width: 150px;
+      width: 100px;
     }
   }
 
@@ -313,19 +314,19 @@ svg {
     }
 
     & .navegar-inicio-cel {
-      transform: translate(-0px, -100px);
+      transform: translate(-10px, -90px);
     }
 
     & .navegar-experiencia {
-      transform: translate(-60px, -60px);
+      transform: translate(-70px, -60px);
     }
 
     & .navegar-proyectos {
-      transform: translate(-80px, -20px);
+      transform: translate(-100px, -20px);
     }
 
     & .navegar-contacto {
-      transform: translate(-60px, 20px);
+      transform: translate(-80px, 20px);
     }
   }
 }
