@@ -61,7 +61,6 @@ form {
     }
   }
   & button {
-    content: "ENVIAR";
     background-color: transparent;
     border-color: var(--color7);
     color: var(--color7);
@@ -199,6 +198,61 @@ form:has(fieldset > textarea:user-invalid) > button {
     border-color: var(--color7);
     color: var(--color8);
     pointer-events: none;
-    content: "ENVIADO";
+  }
+}
+
+@media (max-width: 400px) {
+  .contacto-texto {
+    width: 300px;
+    margin: 20px auto;
+  }
+
+  .contacto-imagen {
+    width: 300px;
+  }
+
+  .contacto-contenedor {
+    margin: 0 auto;
+    width: 310px;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  img {
+    display: none;
+  }
+
+  .foto-apuntando {
+    display: none;
+  }
+
+  .boton-chat {
+    top: 5px;
+    left: 100px;
+  }
+
+  .contacto-imagen:has(.boton-chat:hover) > .foto-apuntando {
+    visibility: hidden;
+  }
+
+  .contacto-imagen:has(.boton-chat:hover) > .foto-formal {
+    visibility: hidden;
+  }
+
+  .icono-cuadrado {
+    display: none;
+  }
+
+  .icono-cuadrado-rojo {
+    display: none;
   }
 }
