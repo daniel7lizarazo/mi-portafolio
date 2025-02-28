@@ -23,7 +23,7 @@ export class AppContentComponent extends HTMLElement {
     });
 
     this.shadowRoot.querySelectorAll("a")?.forEach((anchor) => {
-      anchor.addEventListener("click", (e) => {
+      anchor.addEventListener("pointerup", (e) => {
         menuCel.classList.toggle("active");
       });
     });

@@ -104,7 +104,7 @@ img {
     height: 120px;
     & circle {
       fill: var(--color7);
-      r: 70;
+      transform-origin: center center;
     }
     & .icono-burbuja {
       stroke: var(--color8);
@@ -164,7 +164,7 @@ img {
   from {
   }
   to {
-    r: 100;
+    transform: translate(-10%, -40%) scale(2);
     opacity: 0;
   }
 }

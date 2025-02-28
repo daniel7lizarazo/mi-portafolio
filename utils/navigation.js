@@ -41,7 +41,7 @@ function dibujarPagina() {
 function alistarNavegacion() {
   window.addEventListener("popstate", dibujarPagina);
   links.forEach((link) => {
-    link.addEventListener("click", (evento) => {
+    link.addEventListener("pointerup", (evento) => {
       evento.preventDefault();
       links.forEach((otherLink) => {
         otherLink.classList.remove("link-actual");
