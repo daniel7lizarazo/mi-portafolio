@@ -207,6 +207,10 @@ form:has(fieldset > textarea:user-invalid) > button {
     margin: 20px auto;
   }
 
+  .texto-pantalla-grande {
+    display: none;
+  }
+
   .contacto-imagen {
     width: 300px;
   }
@@ -218,7 +222,7 @@ form:has(fieldset > textarea:user-invalid) > button {
   }
 
   h1 {
-    font-size: 25px;
+    font-size: 20px;
     margin-bottom: 10px;
   }
 
@@ -238,6 +242,11 @@ form:has(fieldset > textarea:user-invalid) > button {
   .boton-chat {
     top: 5px;
     left: 100px;
+
+    & .icono-chat {
+      border-radius: 50%;
+      height: 100px;
+    }
   }
 
   .contacto-imagen:has(.boton-chat:hover) > .foto-apuntando {

@@ -143,7 +143,7 @@ p {
 @media (max-width: 400px) {
   .contenedor-experiencia {
     grid-template-columns: 130px 20px 130px;
-    grid-template-rows: 180px 180px 180px;
+    grid-template-rows: 160px 160px 160px;
     column-gap: 10px;
     grid-template-areas:
       "exp1 barra-progreso img-exp-1"
@@ -226,17 +226,17 @@ p {
   }
   .barra-progreso {
     justify-self: center;
-    height: 500px;
+    height: 460px;
     width: 8px;
     margin-top: 200px;
   }
 
   .barra-progreso > span {
     width: 20px;
-    height: 700px;
+    height: 500px;
     left: auto;
-    transform: translate(-10px, -710px);
-    animation: 8s 0.5s forwards progresar-vertical;
+    transform: translate(-10px, -510px);
+    animation: 6s 1s forwards progresar-vertical;
   }
 
   @keyframes progresar-vertical {
